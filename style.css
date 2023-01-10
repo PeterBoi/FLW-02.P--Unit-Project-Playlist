@@ -19,7 +19,7 @@ h1 {
   display: flex;
   justify-content: space-around;
   border-top: 5px solid black;
-  background-color: rgba(76, 175, 80, 0.3)
+  background: linear-gradient(to left,red, green);
 }
 
 @media screen and (max-width: 600px) {
@@ -77,9 +77,9 @@ button {
 
 body {
   background: url(https://i.pinimg.com/originals/b8/4f/41/b84f4195a6d33c93d01111287c0c7b7e.jpg);
-color: green;
+color: #2bb12b;
 }
 
 h4{
-  color: red;
+  color: black;
 }
