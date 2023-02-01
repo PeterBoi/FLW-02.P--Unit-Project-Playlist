@@ -28,7 +28,6 @@ let songLinks = ['https://www.youtube.com/watch?v=KfQzn081fes', 'https://www.you
 // task 12: create an object for each of your songs.
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 // task 14: create an array that stores all of the objects.
-// review later^^
 
 //REFACTOR LOOPS DAY 
 // task 15: update your `addSongInfo` function so the input values are saved in as values in a new object.
@@ -43,8 +42,11 @@ function addSongInfo() {
   let imageInput = image.value;
   console.log(imageInput);
   let songNameInput = songName.value;
-  let artistInput = artist.value; 
+  console.log(songNameInput);
+  let artistInput = artist.value;
+  console.log(artistInput);
   let songLinkInput = songLink.value;
+  console.log(songLinkInput);
   // task 10: use `.push()` to add each input value to the correct array.
   images.push(imageInput);
   songNames.push(songNameInput);
@@ -66,7 +68,7 @@ function displaySongInfo() {
 
   // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
   images.forEach(function(link) {
-    displayImage.insertAdjacentHTML('beforeend', `<img src='${link}'>`)
+    displayImage.insertAdjacentHTML('beforeend', `<p><img src='${link}'></p>`)
   });
   songNames.forEach(function(song) {
     displaySong.insertAdjacentHTML('beforeend', `<p>${song}</p>`)
@@ -75,12 +77,13 @@ function displaySongInfo() {
     displayArtist.insertAdjacentHTML('beforeend', `<p>${singer}</p>`)
   });
   songLinks.forEach(function(url) {
-    displayLink.insertAdjacentHTML('beforeend', `<h3>${url}</h3>`)
+    displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
   });
 }
 
 // click event to add and display songs
 add.onclick = function() {
+  emptyDisplay();
   addSongInfo();
   displaySongInfo();
 };

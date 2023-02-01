@@ -31,7 +31,7 @@ They will use .push to add new songs to their playlist. Then, students will refa
 
 ## JavaScript: Loop and Display Data
 
-8. [] Loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
+8. [x] Loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
 
 What to display your song data in:
 
@@ -45,24 +45,24 @@ What to display your song data in:
 
 ## JavaScript: Add Song Data
 
-9. [ ] Declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
+9. [x] Declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
    
-10. [ ] Use `.push()` to add each input value to the correct array.
+10. [x] Use `.push()` to add each input value to the correct array.
 
 
 
 ## JavaScript: Refactor Arrays to Objects
 
-11. [ ] Comment out the arrays data.
-12. [ ] Create an object for each of your songs.
-13. [ ] Inside each object, add key/value pairs to store the image url, song name, artist, and song link.
-14. [ ] Create an array that stores all of the objects.
+11. [x] Comment out the arrays data.
+12. [x] Create an object for each of your songs.
+13. [x] Inside each object, add key/value pairs to store the image url, song name, artist, and song link.
+14. [x] Create an array that stores all of the objects.
 
 ## JavaScript: Refactor Loops to Display Info
 
-15. [ ] Update your `addSongInfo` function so the input values are saved in as values in a new object.
-16. [ ] Update your `.push()` so the input object is added to your array of objects.
-17. [ ] Update your loops based on your new array of objects.
+15. [x] Update your `addSongInfo` function so the input values are saved in as values in a new object.
+16. [x] Update your `.push()` so the input object is added to your array of objects.
+17. [x] Update your loops based on your new array of objects.
 
 
 ## Project Extensions:

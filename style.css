@@ -31,7 +31,7 @@ h1 {
 .display-image img {
   display: block;
   height: 100px;
-  width: auto;
+  width: 130px;
   
 }
 
@@ -39,7 +39,7 @@ h1 {
   font-size: 18px;
   height: 100px;
   font-weight: bold;
-  
+  margin: 5px;
 }
 
 .display-artist p {
@@ -54,7 +54,7 @@ h1 {
   font-size: 18px;
   height: 100px;
   font-weight: bold;
-  
+  margin-top: 10px;
 }
 
 .form {
