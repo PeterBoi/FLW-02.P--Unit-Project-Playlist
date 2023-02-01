@@ -7,6 +7,7 @@ let artist = document.querySelector(".artist");
 let songLink = document.querySelector(".song-link");
 // button variable
 let add = document.querySelector(".add");
+let clear = document.querySelector(".clear");
 
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
 
@@ -76,9 +77,12 @@ function displaySongInfo() {
   artists.forEach(function(singer) {
     displayArtist.insertAdjacentHTML('beforeend', `<p>${singer}</p>`)
   });
-  songLinks.forEach(function(url) {
-    displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
-  });
+  for(let i = 0; i < songLinks.length; i++){
+    displayLink.insertAdjacentHTML('beforeend', `<a href='${songLinks[i]}'<p>Click here to listen</p></a>`)
+  }
+  // songLinks.forEach(function(url) {
+  //   displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
+  // });
 }
 
 // click event to add and display songs
@@ -88,5 +92,8 @@ add.onclick = function() {
   displaySongInfo();
 };
 
+clear.onclick = function() {
+  emptyDisplay();
+};
 // function call to display stored songs
 displaySongInfo();
