@@ -79,7 +79,7 @@ function displaySongInfo() {
   });
   for(let i = 0; i < songLinks.length; i++){
     displayLink.insertAdjacentHTML('beforeend', `<a href='${songLinks[i]}'<p>Click here to listen</p></a>`)
-  }
+  };
   // songLinks.forEach(function(url) {
   //   displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
   // });
