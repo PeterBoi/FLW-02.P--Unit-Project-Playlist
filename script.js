@@ -51,13 +51,16 @@ function addSongInfo() {
   // task 10: use `.push()` to add each input value to the correct array.
   images.push(imageInput);
   console.log(images);
+  console.log(images.length);
   songNames.push(songNameInput);
   console.log(songNames);
+  console.log(songNames.length);
   artists.push(artistInput);
   console.log(artists);
+  console.log(artists.length);
   songLinks.push(songLinkInput);
   console.log(songLinks);
-
+  console.log(songLinks.length);
 }
 
 /******** this function empties the display divs each time the button is clicked so that your playlist does not repeatedly add the data too many times. Where should this function be placed???********/
