@@ -50,10 +50,13 @@ function addSongInfo() {
   console.log(songLinkInput);
   // task 10: use `.push()` to add each input value to the correct array.
   images.push(imageInput);
+  console.log(images);
   songNames.push(songNameInput);
+  console.log(songNames);
   artists.push(artistInput);
+  console.log(artists);
   songLinks.push(songLinkInput);
-  
+  console.log(songLinks);
 
 }
 
