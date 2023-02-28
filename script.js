@@ -38,31 +38,31 @@ let Cielito_Lindo;
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 
 Mexico_Lindo_Y_Querido = {
-  image: "https://i.ytimg.com/vi/hLlNJfBS3T4/maxresdefault.jp",
+  imageUrl: "https://i.ytimg.com/vi/hLlNJfBS3T4/maxresdefault.jp",
   songName: "Mexico Lindo Y Querido",
   artist: "Vicente Fernadez",
   songLink: "https://www.youtube.com/watch?v=KfQzn081fes"
 }
 Lo_Que_Siento = {
-  image: "https://img.youtube.com/vi/AjGkbFqi67c/0.jpg",
+  imageUrl: "https://img.youtube.com/vi/AjGkbFqi67c/0.jpg",
   songName: "Lo Que Siento",
   artist: "Cuco",
   songLink: "https://www.youtube.com/watch?v=AjGkbFqi67c"
 }
 La_Chona = {
-  image: "https://i1.sndcdn.com/artworks-000080331953-unkpcp-t500x500.jpg",
+  imageUrl: "https://i1.sndcdn.com/artworks-000080331953-unkpcp-t500x500.jpg",
   songName: "La Chona",
   artist: "Los Tucanes De TiJuana",
   songLink: "https://www.youtube.com/watch?v=ULxcmMgsxf4"
 }
 Limon_Y_Sal = {
-  image: "https://upload.wikimedia.org/wikipedia/en/6/60/Album_Julieta_Venegas_limon_y_sal_cover.jpg",
+  imageUrl: "https://upload.wikimedia.org/wikipedia/en/6/60/Album_Julieta_Venegas_limon_y_sal_cover.jpg",
   songName: "Limon Y Sal",
   artist: "Julieta Venegas",
   songLink: "https://www.youtube.com/watch?v=IJ92gmhvZpM"
 }
 Cielito_Lindo = {
-  image: "https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/a1/71/e1/a171e1e8-845e-b2ff-e748-52545f4f80ed/0.jpg/600x600bf-60.jpg",
+  imageUrl: "https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/a1/71/e1/a171e1e8-845e-b2ff-e748-52545f4f80ed/0.jpg/600x600bf-60.jpg",
   songName: "Cielito Lindo",
   artist: "Angela Aguilar",
   songLink: "https://www.youtube.com/watch?v=UP6Fc09GHQk"
@@ -80,8 +80,6 @@ let songList = [Mexico_Lindo_Y_Querido, Lo_Que_Siento, La_Chona, Limon_Y_Sal, Ci
 // task 17: update your loops based on your new array of objects.
 
 function addSongInfo() {
-
-  // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
   let imageInput = image.value;
   console.log(imageInput);
   let songNameInput = songName.value;
@@ -90,19 +88,40 @@ function addSongInfo() {
   console.log(artistInput);
   let songLinkInput = songLink.value;
   console.log(songLinkInput);
+  // ok if I delete the above code to start a little fresh?Yes
+  // cool cool, so here is task 15 already done!
+  let songInfoObj = {
+    imageUrl: imageInput.value,
+    songName: songNameInput.value,
+    artist: artistInput.value,
+    songLink: songLinkInput.value
+  }
+
+  // task 16 -- we want to push this new obj into our array from task 14. 
+  songList.push(songInfoObj);
+
+  // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
+  // let imageInput = image.value;
+  // console.log(imageInput);
+  // let songNameInput = songName.value;
+  // console.log(songNameInput);
+  // let artistInput = artist.value;
+  // console.log(artistInput);
+  // let songLinkInput = songLink.value;
+  // console.log(songLinkInput);
   // task 10: use `.push()` to add each input value to the correct array.
-  images.push(imageInput);
-  console.log(images);
-  console.log(images.length);
-  songNames.push(songNameInput);
-  console.log(songNames);
-  console.log(songNames.length);
-  artists.push(artistInput);
-  console.log(artists);
-  console.log(artists.length);
-  songLinks.push(songLinkInput);
-  console.log(songLinks);
-  console.log(songLinks.length);
+  // images.push(imageInput);
+  // console.log(images);
+  // console.log(images.length);
+  // songNames.push(songNameInput);
+  // console.log(songNames);
+  // console.log(songNames.length);
+  // artists.push(artistInput);
+  // console.log(artists);
+  // console.log(artists.length);
+  // songLinks.push(songLinkInput);
+  // console.log(songLinks);
+  // console.log(songLinks.length);
 }
 
 /******** this function empties the display divs each time the button is clicked so that your playlist does not repeatedly add the data too many times. Where should this function be placed???********/
@@ -116,21 +135,33 @@ function emptyDisplay() {
 function displaySongInfo() {
 
   // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-  images.forEach(function(link) {
-    displayImage.insertAdjacentHTML('beforeend', `<p><img src='${link}'></p>`)
-  });
-  songNames.forEach(function(song) {
-    displaySong.insertAdjacentHTML('beforeend', `<p>${song}</p>`)
-  });
-  artists.forEach(function(singer) {
-    displayArtist.insertAdjacentHTML('beforeend', `<p>${singer}</p>`)
-  });
-  for (let i = 0; i < songLinks.length; i++) {
-    displayLink.insertAdjacentHTML('beforeend', `<a href='${songLinks[i]}'<p>Click here to listen</p></a>`)
-  };
+  // image.forEach(function(link) {
+  //   displayImage.insertAdjacentHTML('beforeend', `<p><img src='${link}'></p>`)
+  // });
+  // songName.forEach(function(song) {
+  //   displaySong.insertAdjacentHTML('beforeend', `<p>${song}</p>`)
+  // });
+  // artist.forEach(function(singer) {
+  //   displayArtist.insertAdjacentHTML('beforeend', `<p>${singer}</p>`)
+  // });
+  // for (let i = 0; i < songLink.length; i++) {
+  //   displayLink.insertAdjacentHTML('beforeend', `<a href='${songLink[i]}'<p>Click here to listen</p></a>`)
+  // };
   // songLinks.forEach(function(url) {
   //   displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
   // });
+  songList.forEach(function(songListimageUrl) {
+    displayImage.insertAdjacentHTML('beforeend', `<p><img src='${songListimageUrl}'></p>`)
+  });
+  songList.forEach(function(songListsongName) {
+    displaySong.insertAdjacentHTML('beforeend', `<p>${songListsongName}</p>`)
+  });
+  songList.forEach(function(songListartist) {
+    displayArtist.insertAdjacentHTML('beforeend', `<p>${songListartist}</p>`)
+  });
+  songList.forEach(function(songListsongLink) {
+    displayLink.insertAdjacentHTML('beforeend', `<a href='${songListsongLink}'<p>Click here to listen</p></a>`)
+  });
 }
 
 // click event to add and display songs
