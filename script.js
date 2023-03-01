@@ -38,7 +38,7 @@ let Cielito_Lindo;
 // task 13: inside each object, add key/value pairs to store the image url, song name, artist, and song link.
 
 Mexico_Lindo_Y_Querido = {
-  imageUrl: "https://i.ytimg.com/vi/hLlNJfBS3T4/maxresdefault.jp",
+  imageUrl: "https://i.ytimg.com/vi/hLlNJfBS3T4/maxresdefault.jpg",
   songName: "Mexico Lindo Y Querido",
   artist: "Vicente Fernadez",
   songLink: "https://www.youtube.com/watch?v=KfQzn081fes"
@@ -87,7 +87,7 @@ function addSongInfo() {
     songLink: songLink.value
   }
   songList.push(songInfoObj);
-
+  console.log(songInfoObj);
   // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
   // let imageInput = image.value;
   // console.log(imageInput);
@@ -139,20 +139,19 @@ function displaySongInfo() {
   //   displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
   // });
   
-  songList.forEach(function(songListimageUrl) {
-    displayImage.insertAdjacentHTML('beforeend', `<p><img src='${songListimageUrl}'></p>`)
+  songList.forEach(function(songList) {
+    displayImage.insertAdjacentHTML('beforeend', `<p><img src='${songList.imageUrl}'></p>`)
   });
-  songList.forEach(function(songListsongName) {
-    displaySong.insertAdjacentHTML('beforeend', `<p>${songListsongName}</p>`)
+  songList.forEach(function(songList) {
+    displaySong.insertAdjacentHTML('beforeend', `<p>${songList.songName}</p>`)
   });
-  songList.forEach(function(songListartist) {
-    displayArtist.insertAdjacentHTML('beforeend', `<p>${songListartist}</p>`)
+  songList.forEach(function(songList) {
+    displayArtist.insertAdjacentHTML('beforeend', `<p>${songList.artist}</p>`)
   });
-  songList.forEach(function(songListsongLink) {
-    displayLink.insertAdjacentHTML('beforeend', `<a href='${songListsongLink}'<p>Click here to listen</p></a>`)
+  songList.forEach(function(songList) {
+    displayLink.insertAdjacentHTML('beforeend', `<a href='${songList.songLink}'<p>Click here to listen</p></a>`)
   });
 }
-
 // click event to add and display songs
 add.onclick = function() {
   emptyDisplay();
