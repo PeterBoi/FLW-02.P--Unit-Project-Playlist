@@ -80,24 +80,12 @@ let songList = [Mexico_Lindo_Y_Querido, Lo_Que_Siento, La_Chona, Limon_Y_Sal, Ci
 // task 17: update your loops based on your new array of objects.
 
 function addSongInfo() {
-  let imageInput = image.value;
-  console.log(imageInput);
-  let songNameInput = songName.value;
-  console.log(songNameInput);
-  let artistInput = artist.value;
-  console.log(artistInput);
-  let songLinkInput = songLink.value;
-  console.log(songLinkInput);
-  // ok if I delete the above code to start a little fresh?Yes
-  // cool cool, so here is task 15 already done!
   let songInfoObj = {
-    imageUrl: imageInput.value,
-    songName: songNameInput.value,
-    artist: artistInput.value,
-    songLink: songLinkInput.value
+    imageUrl: image.value,
+    songName: songName.value,
+    artist: artist.value,
+    songLink: songLink.value
   }
-
-  // task 16 -- we want to push this new obj into our array from task 14. 
   songList.push(songInfoObj);
 
   // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
@@ -150,6 +138,7 @@ function displaySongInfo() {
   // songLinks.forEach(function(url) {
   //   displayLink.insertAdjacentHTML('beforeend', `<a href='${url}'<p>Click here to listen</p></a>`)
   // });
+  
   songList.forEach(function(songListimageUrl) {
     displayImage.insertAdjacentHTML('beforeend', `<p><img src='${songListimageUrl}'></p>`)
   });
